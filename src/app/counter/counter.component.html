@@ -1,0 +1,11 @@
+<!-- src/app/components/counter/counter.component.html -->
+
+<h1>Счетчик: {{ counter$ | async }}</h1>
+<button (click)="onIncrement()">Увеличить</button>
+<button (click)="onDecrement()">Уменьшить</button>
+<button (click)="onReset()">Сбросить</button>
+
+<!-- Отображение ошибки, если она есть -->
+<div *ngIf="error$ | async as error" class="error">
+    {{ error }}
+  </div>
